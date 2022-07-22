@@ -1,7 +1,12 @@
+provider "google" {
+  project = "{{YOUR GCP PROJECT}}"
+  region  = "us-central1"
+  zone    = "us-central1-a"
+}
+
 resource "google_compute_instance" "atembot_server" {
   name         = "atem-bot"
   machine_type = "e2-micro"
-  zone = "us-central1-a"
 
   boot_disk {
     initialize_params {
@@ -15,4 +20,9 @@ resource "google_compute_instance" "atembot_server" {
     access_config {
     }
   }
+}
+
+resource "google_compute_network" "atem_net" {
+  name                    = "atem_network"
+  auto_create_subnetworks = "true"
 }
