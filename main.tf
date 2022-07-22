@@ -1,7 +1,17 @@
+terraform {
+  required_providers {
+    google = {
+      source = "hashicorp/google"
+    }
+  }
+}
+
 provider "google" {
-  project = "{{YOUR GCP PROJECT}}"
-  region  = "us-central1"
-  zone    = "us-central1-a"
+  version = "3.5.0"
+  credentials = file(var.credentials_file)
+  project = var.project
+  region  = var.region
+  zone    = var.zone
 }
 
 resource "google_compute_instance" "atembot_server" {
