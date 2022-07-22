@@ -32,6 +32,6 @@ resource "google_compute_instance" "atembot_server" {
 }
 
 resource "google_compute_network" "atem_net" {
-  name                    = "atem_network"
+  name                    = "atem-network"
   auto_create_subnetworks = "true"
 }
