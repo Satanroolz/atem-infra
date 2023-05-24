@@ -1,2 +1,2 @@
-project                  = "<PROJECT_ID>"
-credentials_file         = "<FILE>"
+project                  = "bot-atem"
+credentials_file         = "/path/to/creds/"

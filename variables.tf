@@ -9,3 +9,7 @@ variable "region" {
 variable "zone" {
   default = "us-central1-a"
 }
+
+variable "image" {
+  default = "centos-cloud/centos-7"
+}
