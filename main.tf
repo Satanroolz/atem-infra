@@ -19,7 +19,7 @@ resource "google_compute_instance" "atembot_server" {
 
   boot_disk {
     initialize_params {
-      image = "centos-cloud/centos-7"
+      image = var.image
     }
   }
 
